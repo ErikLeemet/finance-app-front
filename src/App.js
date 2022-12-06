@@ -1,34 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Navbar';
-import { Component } from 'react';
-import Dashboard from './pages/Dashboard';
-import Procurements from './pages/Procurements';
-import Projects from './pages/Projects';
-import Resources from './pages/Resources';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Dashboard from "./pages/Dashboard";
+import Procurements from "./pages/Procurements";
+import Resources from "./pages/Resources";
+import Projects from "./pages/Projects";
 
-function App() {
-    let Component
-    switch (window.location.pathname) {
-        case "/Dashboard":
-            Component = Dashboard;
-        break;
-        case "/Procurements":
-            Component = Procurements;
-        break;
-        case "/Resources":
-            Component = Projects;
-        break;
-        case "/Projects":
-            Component = Resources;
-        break;
-    }
+export default function App() {
   return (
-    <>
-    <Navbar/>
-    <Component />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="Dashboard" element={<Dashboard />} />
+          <Route path="Procurements" element={<Procurements />} />
+          <Route path="Resources" element={<Resources />} />
+          <Route path="Projects" element={<Projects />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
