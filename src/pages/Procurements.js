@@ -1,5 +1,5 @@
 export default function Procurements() {
     return (
-        <h1>Procurements</h1>
+        <h1 role="heading">Procurements</h1>
     )
 }
