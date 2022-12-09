@@ -33,7 +33,7 @@ body {
     padding: .25rem;
 }
 
-.navbar li:active {
+.navbar a:active {
     background-color: red;
 }
 .navbar li:hover {
