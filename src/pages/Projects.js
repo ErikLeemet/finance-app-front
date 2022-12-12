@@ -14,7 +14,7 @@ async function populate() {
   populate();
 
   function populateProjects(obj) {
-    const content = document.getElementById(mainContent);
+    const content = document.getElementById('mainContent');
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
