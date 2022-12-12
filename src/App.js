@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 
 export default function App() {
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -17,5 +18,6 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </>
   );
 }

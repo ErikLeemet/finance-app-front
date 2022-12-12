@@ -3,11 +3,6 @@ import userEvent from '@testing-library/user-event'
 import App from './App';
 import React from 'react'
 import '@testing-library/jest-dom'
-import BrowserRouter, { MemoryRouter } from 'react-router-dom'
-import Dashboard from './pages/Dashboard';
-import Procurements from "./pages/Procurements";
-import Resources from "./pages/Resources";
-import Projects from "./pages/Projects";
 
 test("User click on dashboard renders dashboard page", async () => {
     render(<App />)
