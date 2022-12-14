@@ -2,7 +2,7 @@ import './Content.css'
 
 export default function Content({theadData, tbodyData}) {
     return(
-<div class="table-wrapper">
+<div className="table-wrapper">
   <table>
    <thead>
     <tr>
@@ -17,8 +17,8 @@ export default function Content({theadData, tbodyData}) {
    <tbody className="table">
    {tbodyData.map((row, index) => {
     return <tr key={index}>
-        {theadData.map((key) => {
-            return <td key={row[key]}>{row[key]}</td>
+        {theadData.map((key, index) => {
+            return <td unique-key={index} key={row[key]}>{row[key]}</td>
         })}
    </tr>;
    })}
