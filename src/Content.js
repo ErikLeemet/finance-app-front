@@ -6,7 +6,6 @@ export default function Content({theadData, tbodyData}) {
   <table>
    <thead>
     <tr>
-      <th></th>
       <th>Projekti kood</th>
       <th>Projekti nimetus</th>
       <th>Eelarve</th>
@@ -17,11 +16,11 @@ export default function Content({theadData, tbodyData}) {
   </thead>
    <tbody className="table">
    {tbodyData.map((row, index) => {
-       return <tr key={index}>
-            {theadData.map((key) => {
-               return <td key={row[key]}>{row[key]}</td>
-            })}
-       </tr>;
+    return <tr key={index}>
+        {theadData.map((key) => {
+            return <td key={row[key]}>{row[key]}</td>
+        })}
+   </tr>;
    })}
   </tbody>
   </table>

@@ -1,5 +1,5 @@
 import Content from "../Content";
-import data from "../data.json"
+import data from "../Projects.json"
 
 const getHeadings = () => {
       return Object.keys(data[0]);
